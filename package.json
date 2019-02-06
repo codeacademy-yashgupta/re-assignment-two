@@ -1,0 +1,28 @@
+{
+  "name": "reassignmenttwo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeacademy-yashgupta/re-assignment-two.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codeacademy-yashgupta/re-assignment-two/issues"
+  },
+  "homepage": "https://github.com/codeacademy-yashgupta/re-assignment-two#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "dependencies": {
+    "hapi": "^18.1.0",
+    "jest": "^24.0.0"
+  }
+}

@@ -15,8 +15,8 @@ describe('the insertBooks route', () => {
   });
   it('should respond with a object with a message key', async () => {
     const options = {
-      method: 'GET',
-      url: '/booksWithRating',
+      method: 'POST',
+      url: '/insertBooks',
     };
     const response = await server.inject(options);
     expect(typeof response.result).toEqual(typeof {});

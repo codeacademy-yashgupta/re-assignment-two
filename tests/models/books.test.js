@@ -13,6 +13,15 @@ describe('generate', () => {
   });
 });
 
+describe('bookLike', () => {
+  it('should like the book with given id', async () => {
+    const bookId = 10;
+    const like = true;
+    const bookLike = await Model.book.likeBook(bookId, like);
+    console.log(bookLike);
+    expect(Array.isArray(bookLike)).toEqual(true);
+  });
+});
 afterAll(() => {
   Model.book.sequelize.close();
 });

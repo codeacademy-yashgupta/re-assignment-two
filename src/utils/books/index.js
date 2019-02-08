@@ -22,7 +22,19 @@ const getBooksWithRating = async () => {
   }));
 };
 
+const groupBooksByAuthorName = async () => {
+  const booksWithRating = await getBooksWithRating();
+  const result = booksWithRating.reduce((accumulator, value) => {
+    // eslint-disable-next-line no-param-reassign
+    accumulator[value.Author] = accumulator[value.Author] || [];
+    accumulator[value.Author].push(value);
+    return accumulator;
+  }, {});
+  // console.log(result);
+  return result;
+};
+
 
 module.exports = {
-  getBooksWithoutRating, getBookRatingById, getBooksWithRating,
+  getBooksWithoutRating, getBookRatingById, getBooksWithRating, groupBooksByAuthorName,
 };

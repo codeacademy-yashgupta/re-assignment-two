@@ -3,7 +3,7 @@
  */
 
 const {
-  getBooksWithoutRating, getBookRatingById, getBooksWithRating,
+  getBooksWithoutRating, getBookRatingById, getBooksWithRating, groupBooksByAuthorName,
 } = require('./../../../src/utils/books');
 
 describe('getBooksWithoutRating', () => {
@@ -25,5 +25,12 @@ describe('getBooksWithRating', () => {
   it('should return books with rating', async () => {
     const booksWithRating = await getBooksWithRating();
     expect(typeof (booksWithRating[0].rating)).toEqual('number');
+  });
+});
+
+describe('groupBooksByAuthorName', () => {
+  it('should group the books by Author', async () => {
+    const groupByAuthor = await groupBooksByAuthorName();
+    expect(Object.keys(groupByAuthor).length > 0).toEqual(true);
   });
 });
